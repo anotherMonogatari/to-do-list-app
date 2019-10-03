@@ -1,0 +1,111 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap');
+
+$color1: rgb(161, 0, 0);
+$color2: black;
+$color3: white;
+
+body {
+  font-family: 'Rubik Mono One', sans-serif;
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+  background: $color1;
+  
+}
+
+h1 {
+  color: $color2;
+  display: inline-block;
+  font-size: 3.5rem;
+  padding: 1rem 2rem;
+  background: $color3;
+  border: 5px solid $color2;
+  transform: rotate(1deg) translateZ(1px);
+}
+
+form {
+  transform: rotate(-2deg) translateZ(1px);
+
+}
+
+.list-item {
+  text-align: center;
+  border: 5px solid $color2;
+  color: $color2;
+  font-size: 1.6rem;
+  padding-top: 1rem;
+  background: $color3;
+  &:first-child {
+    margin-top: 3rem;
+  }
+  &:nth-child(odd) {
+    transform: translate(1.5rem) translateZ(1px) rotate(2deg);
+  }
+  &:nth-child(even) {
+    transform: translate(-1.5rem) translateZ(1px) rotate(-1deg);
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Rubik Mono One', sans-serif;
+  display: block;
+  width: 100%;
+  border: none;
+  background: $color2;
+  color: $color3;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+input {
+  width: 70%;
+  border: 5px solid $color2;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+.add-btn {
+  display: inline-block;
+  width: 100px;
+  padding: 1rem;
+  width: 20%;
+  border: 5px solid $color2;
+}
+
+.sort-btn {
+  margin: 2rem auto 0;
+  width: 20%;
+  padding: 1.5rem 0;
+  display: inline-block;
+}
+
+@media (max-width: 930px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    width: 70%;
+  }
+} 
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    width: 80%;
+  }
+} 
+@media (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+} 
+@media (max-width: 425px) {
+  html {
+    font-size: 7px;
+  }
+} 
