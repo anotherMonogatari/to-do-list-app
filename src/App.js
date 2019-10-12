@@ -15,7 +15,7 @@ function App(props) {
       </form>
       <button className='sort-btn' onClick={props.sortTodo}>Sort</button>
       <div className='items-container'>
-        {props.state.map(item => <p className='list-item' key={item.text} id={item.id}>{item.text} | {item.date.toLocaleString()}
+        {props.state.map(item => <p className='list-item' key={item.id} id={item.id}>{item.text} | {item.date.toLocaleString()}
         <button onClick={props.deleteTodo}>Delete</button></p>)}
       </div>
     </div>

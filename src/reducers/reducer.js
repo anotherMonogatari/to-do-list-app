@@ -2,19 +2,21 @@ const initState = [
 	
 ]
 
+let idCount = 0;
+
 const reducer = (state = initState, action) => {
     if (action.type === 'ADD') {
        return [
 		   ...state,
 		   {
 			   text: action.payload,
-			   id: state.length,
+			   id: idCount++,
 			   date: new Date()
 		   }
 	   ]
     }
     if (action.type === 'DELETE') {
-        return state.filter(item => item.id !== +action.payload)
+        return state.filter(item => item.id !== + action.payload)
     }
     if (action.type === 'SORT') {
 		let newArray = [...state]
