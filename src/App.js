@@ -10,11 +10,11 @@ function App(props) {
     <div>
       <h1>To-do List</h1>
       <form name='todoForm'>
-        <input type='text' name='todoText' autoFocus='true' ></input>
+        <input type='text' name='todoText'></input>
         <button className='add-btn' type='submit' onClick={props.addTodo}>Add</button>
       </form>
       <button className='sort-btn' onClick={props.sortTodo}>Sort</button>
-      <div>
+      <div className='items-container'>
         {props.state.map(item => <p className='list-item' key={item.text} id={item.id}>{item.text} | {item.date.toLocaleString()}
         <button onClick={props.deleteTodo}>Delete</button></p>)}
       </div>
@@ -32,10 +32,9 @@ const mapDispatchToProps = (dispatch) => {
  return {
    addTodo: (e) => {
     e.preventDefault();
-    if (document.querySelector('input').value === '') {
+    if (!document.querySelector('input').value.trim()) {
       return }
      else {
-       
      dispatch({type: 'ADD', payload: document.querySelector('input').value});
      document.querySelector('input').value = '';
      }
